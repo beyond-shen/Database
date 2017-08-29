@@ -76,3 +76,29 @@ drop table tablename; --> 删除表
 //改名
 alter table oldname rename newname; --> 改表名
 ```
+3. 对字段的操作
+
+```sql
+//修改字段类型
+alter table stu modify 字段名 字段类型; 
+```
+
+```sql
+//增加字段，若有after，column后面不加括号包含新字段
+ alter table stu add column 字段名，修饰1，修饰2.. after 字段名;
+```
+```sql
+//删除字段
+alter table stu drop column 字段名;
+```
+
+```sql
+//段改名字，可以写可以不写type
+alter table stu change oldname newname type;
+```
+
+```sql
+//默认值
+alter table stu alter 字段名 set default 100; --> 修改默认值
+ alter table stu alter 字段名 drop default; --> 删除字段默认值
+```
