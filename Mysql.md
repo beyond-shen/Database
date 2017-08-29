@@ -52,7 +52,7 @@ SQL是结构化查询语言，用于存取数据以及查询更新和管理关�
 1. 数据库的创建和删除(数据库名以db结尾)
 
 ```sql
-//创建 
+/`创建 
 (1) create database databasename;  --> 创建数据库默认编码格式为ASCii
 (2) create database databasename default character set utf8 collate utf8_general_ci; --> 编码格式为utf8
 
@@ -124,4 +124,27 @@ delete from table where expression --> 删除指定条件的记录
 ```sql
 //更新
 update tablename set f1=value1,f2=value2 where expression --> 对满足条件的记录的对应字段值进行更改
+```
+
+## 常见问题
+
+### 什么是主键？什么是外键？
+
+主键:关系型数据库中的一条记录中有若干个属性，若其中某一个属性组(注意是组)能唯一标识一条记录，该属性组就可以成为一个主键 
+外键:内联外联用的，在一个表汇总出现另一个表的主键就叫做外键
+
+### 内连接和外连接有什么不同？左连接，右连接和全连接的区别?
+
+内连接：2个有关系的表完全进行关联，外连接是2个有关系的表进行关联，没有关联的也会出现
+
+```sql
+ select teacher.id,teacher.teacher,student.id,student.name  from student,teacher where teacher.stu = student.name;
+//注意:前面的顺序决定显示出来的顺序，所谓的内联就是完全满足条件的联系，其他不显示
+```
+左连接，右连接和全连接都是外连接，
+
+```sql
+// mysql中
+左联：s left join on t  --> 前面的完全显示s，
+右联：t right join on s --> 后面的s完全显示s,和左联等同
 ```
