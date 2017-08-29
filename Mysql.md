@@ -59,3 +59,20 @@ SQL是结构化查询语言，用于存取数据以及查询更新和管理关�
 // 删除
 drop database databasename; --> 删除数据库
 ```
+
+2. 创建一个表
+
+```sql
+  //创建
+  create table tablename(id int(10) not null auto_increment primary key, name varchar(64) not null,age int, score float default 0.0); --> 创建表
+```
+注意:表名后面用括号包含字段设置，每个字段直接用逗号隔开，字段名在前，修饰在后，int类型不加参数默认长度为11，最好按照上述顺序写修饰，使用varchar必须写长度，auto_increment是自动增加，一般用在id,primary key 是设置主键，一般把id设置为主键
+
+```sql
+drop table tablename; --> 删除表
+```
+
+```sql
+//改名
+alter table oldname rename newname; --> 改表名
+```
