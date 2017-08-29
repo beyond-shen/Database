@@ -102,3 +102,26 @@ alter table stu change oldname newname type;
 alter table stu alter 字段名 set default 100; --> 修改默认值
  alter table stu alter 字段名 drop default; --> 删除字段默认值
 ```
+##### DML(数据操纵) -记录的增删改查
+
+```sql
+//增加
+insert into tablename values (,,,)  --> 若是所有字段都要赋值可以这写
+insert into tablename (field1,field3) values (value1,value3) --> 指定要赋值的字段
+```
+```sql
+//查询
+select * from table --> 查询表中所有字段
+select * from table where expression --> 按照条件查询记录的所有字段
+select table.id from table where expression
+```
+
+```sql
+//删除
+delete from table where expression --> 删除指定条件的记录
+```
+
+```sql
+//更新
+update tablename set f1=value1,f2=value2 where expression --> 对满足条件的记录的对应字段值进行更改
+```
