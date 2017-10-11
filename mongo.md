@@ -56,6 +56,27 @@ db.collectionname.save() // 若是指定_id就会更新该_id的数据
 ```
 db.collectionname.find()
 db.collectionname.findOne()
+db.collectionname.find('age':{常用参数:值})  //查找满足条件的文档
+
+// 常用查找参数:
+1. $lt:小于
+2. $lte:小于等于
+3. $gt:大于
+4. $gte:大于等于
+5. $ne:不等于
+6. $mod:[10,0] --> 能被10整除的
+7. $not:{$mod:[10,0]} --> 不能被10整除的
+8. $all：包含什么的
+9. $size：查找指定数组长度的文档
+
+// 按照or条件查询：$or:{[age:10,course:'html']}  --> 多个条件在一个数组里
+// 按照and:多个条件用逗号隔开
+
+db.collectionname.find().limit(2) // 限制输出2条
+db.collectionname.find().skip(1) //跳过查询到的前1条文档
+db.collectionname.find().count() // 统计文档个数
+db.collectionname.find().sort() // 按照条件进行排序
+db.collectionname.find({},{'name':1}) // 查询到的文档按照指定域输出
 ```
 12. 文档的更新:
 ```
