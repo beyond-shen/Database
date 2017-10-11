@@ -117,3 +117,23 @@ db.collectionName.dropIndexes() // 删除所有索引
 #### 远程数据库的使用
 
 远程数据库地址:[网络数据库](mlab.com)
+
+1. 安装mongob第三方包
+```shell
+$ npm install mongodb --save-dev
+$ npm i mongodb -d
+```
+2. 连接mongodb数据库:创建xx.js
+
+```js
+var MongoClient = require('mongodb').MongoClient;
+
+// 本地的url写法
+var url = 'mongodb://ip:27017/databasename';
+
+// 数据库的连接
+MongoClient.connect(url,function(err,db){
+  // 对指定集合文档的操作
+  db.collection('collectionname').insert({})
+});
+```
