@@ -31,7 +31,7 @@ $ mongo ip:27017
 
 ```shell
 $ use dbname
-// 要想在show dbs看到新创建的数据库，必须在该数据库中创建一个集合并给该集合添加数据
+// 要想在show dbs看到新创建的数据库，必须在该数据库中创建一个集合并给该集合添加文档(json格式)
 
 $ db.collectionname.insert({name:'lisi',age:16})
 ```
@@ -40,4 +40,15 @@ $ db.collectionname.insert({name:'lisi',age:16})
 7. 数据库的删除:
 ```shell
 db.dropDatabase()
+```
+8. 显示所有集合:show collections
+9. 集合的删除:
+```shell
+db.collectionname.drop()
+//true
+```
+10. 文档的插入：
+```
+db.collectionname.insert()
+db.collectionname.save() // 若是指定_id就会更新该_id的数据
 ```
