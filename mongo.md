@@ -181,6 +181,16 @@ var userSchema = new Schema({
   name: String,
   age:Number
 })
+/* 常见数据类型
+String: 字符串类型
+Number: 数字类型
+Date: 日期类型
+Buffer: 二进制类型
+Boolean: 布尔类型
+Schema.Types.Mixed: 任何类型的数据
+Schema.Types.ObjectId: MongoDB中一个典型的24个字符, 12字节的十六进制的数字字符串.
+Array: 数组类型
+*/
 ```
 
 #### 使用mongoose.model将格式分配给指定数据集
