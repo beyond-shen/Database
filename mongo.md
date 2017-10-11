@@ -67,6 +67,6 @@ db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcer
 
 //更新内容的常用参数:
 1. $set:{} --> 重新设置
-2. $unset:{} --> 相当于删除
+2. $unset:{age:1} --> 相当于删除指定键
 3. $inc:{} --> 在对应键上增加
 ```
