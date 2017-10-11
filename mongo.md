@@ -52,7 +52,12 @@ db.collectionname.drop()
 db.collectionname.insert()
 db.collectionname.save() // 若是指定_id就会更新该_id的数据
 ```
-11. 文档的更新:
+11. 文档的查找：
+```
+db.collectionname.find()
+db.collectionname.findOne()
+```
+12. 文档的更新:
 ```
 db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcern})
 
