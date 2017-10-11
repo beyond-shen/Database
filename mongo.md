@@ -148,3 +148,25 @@ MongoClient.connect(url,function(err,db){
   db.close()
 });
 ```
+
+## mongoose
+
+mongoose是一个提供了MongoDB地的相映射的Node.js库，将数据库中的数据转换为js对象来使用，是用来连接nodejs和MongoDB的一种中间件
+
+### 使用
+
+#### 安装
+
+```shell
+$ npm install mongoose --save
+```
+
+#### 使用mongoose连接数据库
+
+必须确保MongoDB处于运行中
+```js
+var mongoose = require('mongoose');
+var url = 'mongodb://ip:27017/dbname';
+mongoose.connect(url,{useMongoClient:true});
+var db = mongoose.connection;
+```
