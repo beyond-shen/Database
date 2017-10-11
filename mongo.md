@@ -31,9 +31,9 @@ $ mongo ip:27017
 
 ```shell
 $ use dbname
-// 要想在show dbs看到新创建的数据库，必须添加数据
+// 要想在show dbs看到新创建的数据库，必须添加对象集合
 
-$ db.dbname.insert(name:'lisi',age:'')
+$ db.dbname.insert({name:'lisi',age:16})
 ```
 5. show dbs : 显示所有数据库
 6. db: 显示当前数据库
