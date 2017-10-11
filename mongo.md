@@ -104,3 +104,12 @@ db.collectionname.remove({query},{justOne:boolean,writeConcern:<document>})
 //query:删除指定条件的文档
 // justOne: 设置为true或者１时，仅仅删除第一个符合条件的文档, 默认删除所有符合条件的
 ```
+14. 索引（是对值进行排序的一种结构）：
+```
+db.collectionname.ensureIndex({name:1,age:-1}) // 创建索引，1为升序，-1为降序
+db.collectionName.ensureIndex({"name": 1}, {"unique": true}) //创建name域不可以有重复值，唯一索引
+db.collectionName.dropIndex({"name":1}) // 删除指定索引
+db.collectionName.dropIndexes() // 删除所有索引
+```
+
+15. 
