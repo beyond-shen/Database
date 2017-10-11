@@ -133,7 +133,15 @@ var url = 'mongodb://ip:27017/databasename';
 
 // 数据库的连接
 MongoClient.connect(url,function(err,db){
-  // 对指定集合文档的操作
-  db.collection('collectionname').insert({})
+  // 对指定集合文档的插入
+  db.collection('collectionname').insert({})
+  // 对指定集合文档的查询
+  var curosr = db.collection('collectionname').find() // 得到的不是数据而是迭代对象
+  // 得到文档
+  cursor.each(function(err,doc){
+    if(doc != null){
+     console.log(doc);
+    }
+  })
 });
 ```
