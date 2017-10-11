@@ -176,7 +176,7 @@ Schema仅仅只是数据属性的模型，以文件形式存储但不具备数�
 
 ```js
 var Schema = mongoose.Schema; // 获得mongoose中的内置Schema
-// 通过new来创建一个指定的数据属性模型
+// 通过new来创建一个原型
 var userSchema = new Schema({
   name: String,
   age:Number
@@ -198,7 +198,7 @@ Array: 数组类型
 将Schema发布为model,模型变量名首字母大写
 
 ```js
-// 给指定集合指定的数据属性模型,mongoose会给指定的集合名加上复数，若是复数则不加
+// 给指定集合指定的数据属性模型,mongoose会给指定的集合名加上复数，若是复数则不加，
 var User = mongoose.model('User',userSchema);
 ```
 #### model创建实例
