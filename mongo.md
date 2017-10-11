@@ -77,3 +77,9 @@ db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcer
 9. $rename:{course:'courses'} --> 给数组域改名
 10. $addToset:{} --> 数据不存在才添加
 ```
+13. 文档的删除:
+```
+db.collectionname.remove({query},{justOne:boolean,writeConcern:<document>})
+//query:删除指定条件的文档
+// justOne: 设置为true或者１时，仅仅删除第一个符合条件的文档, 默认删除所有符合条件的
+```
