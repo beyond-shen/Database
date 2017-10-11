@@ -193,7 +193,9 @@ var User = mongoose.model('User',userSchema);
 ```
 #### model创建实例
 
+```js
 var wang = new User({
  name:'wangsan',
  age:16,
 })
+```
