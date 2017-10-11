@@ -18,7 +18,7 @@ mongodb是文档型非关系型数据库，每一条记录就是一个集合
 $ sudo vim /etc/mongo.conf
 ```
 
-#### 使用
+#### 本地linux下操作使用
 
 1. 默认端口是27017
 2. 每次启动前需要：
@@ -114,5 +114,6 @@ db.collectionName.ensureIndex({"name": 1}, {"unique": true}) //创建name域不�
 db.collectionName.dropIndex({"name":1}) // 删除指定索引
 db.collectionName.dropIndexes() // 删除所有索引
 ```
+#### 远程数据库的使用
 
-15. 远程数据库地址:[远程数据库](mlab.com)
+远程数据库地址:[网络数据库](mlab.com)
