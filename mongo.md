@@ -52,3 +52,11 @@ db.collectionname.drop()
 db.collectionname.insert()
 db.collectionname.save() // 若是指定_id就会更新该_id的数据
 ```
+11. 文档的更新:
+```
+db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcern})
+
+// upsert：若更新的不存在，true就是插入新记录，false就是不插入
+// multi：默认false只更新找到的第一条记录，true多条更新
+// writeConcern:抛出异常级别，<document>
+```
