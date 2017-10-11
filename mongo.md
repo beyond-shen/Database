@@ -89,7 +89,7 @@ db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcer
 // multi：默认false只更新找到的第一条记录，true多条更新
 // writeConcern:抛出异常级别，<document>
 
-//更新内容的常用参数:
+//更新内容的常用参数（原子操作）:
 1. $set:{} --> 重新设置
 2. $unset:{age:1} --> 相当于删除指定键
 3. $inc:{} --> 在对应键上增加
@@ -209,3 +209,12 @@ var wang = new User({
  age:16,
 })
 ```
+### 使用mongoose出现的问题
+
+1. (node:5684) DeprecationWarning: Mongoose: mpromise (mongoose’s default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+
+解决:mongoose.Promise = global.Promise;
+
+2. (node:148572) DeprecationWarning: open() is deprecated in mongoose >= 4.11.0, use openUri() instead, or set the useMongoClient option if using connect() or createConnection(). See http://mongoosejs.com/docs/connections.html#use-mongo-clien  opened
+
+解决:mongoose.connect(url, {useMongoClient: true});
