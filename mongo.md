@@ -118,6 +118,8 @@ db.collectionName.dropIndexes() // 删除所有索引
 
 远程数据库地址:[网络数据库](mlab.com)
 
+[mongodb api文档](http://mongodb.github.io/node-mongodb-native/2.2/api/)
+
 1. 安装mongob第三方包
 ```shell
 $ npm install mongodb --save-dev
