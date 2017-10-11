@@ -69,4 +69,11 @@ db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcer
 1. $set:{} --> 重新设置
 2. $unset:{age:1} --> 相当于删除指定键
 3. $inc:{} --> 在对应键上增加
+4. $push:{course:'html'} --> 添加一个键，给该键值是数组中添加一条数据
+5. $pushAll:{course:['hello','name']} --> 给数组域中添加多条数据
+6. $pop:{course:1}  --> 删除数组域中的最后一个，若为-1则是第一个，按位置
+7. $pull:{course:'html'} --> 删除数组域中的指定数据
+8. $pullAll:{course:['html','name']}  --> 删除数组域中指定的多条数据
+9. $rename:{course:'courses'} --> 给数组域改名
+10. $addToset:{} --> 数据不存在才添加
 ```
