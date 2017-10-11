@@ -39,5 +39,5 @@ $ db.dbname.insert({name:'lisi',age:16})
 6. db: 显示当前数据库
 7. 数据库的删除:
 ```shell
-db.dropDataBase()
+db.dropDatabase()
 ```
