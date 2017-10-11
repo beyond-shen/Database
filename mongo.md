@@ -1,6 +1,8 @@
-# mongo 和mongoose
+# mongodb 和mongoose
 
-## mongo（linux）
+mongodb是文档型非关系型数据库，每一条记录就是一个集合
+
+## mongodb（linux）
 
 
 ### 安装
@@ -24,4 +26,18 @@ $ sudo servive mongod start
 ```shell
 $ mongo
 $ mongo ip:27017
+```
+4. 创建数据库，若存在切换:
+
+```shell
+$ use dbname
+// 要想在show dbs看到新创建的数据库，必须添加数据
+
+$ db.dbname.insert(name:'lisi',age:'')
+```
+5. show dbs : 显示所有数据库
+6. db: 显示当前数据库
+7. 数据库的删除:
+```shell
+db.dropDataBase()
 ```
