@@ -64,4 +64,9 @@ db.collectionname.update({查询条件},{更新内容},{upsert,multi,writeConcer
 // upsert：若更新的不存在，true就是插入新记录，false就是不插入
 // multi：默认false只更新找到的第一条记录，true多条更新
 // writeConcern:抛出异常级别，<document>
+
+//更新内容的常用参数:
+1. $set:{} --> 重新设置
+2. $unset:{} --> 相当于删除
+3. $inc:{} --> 在对应键上增加
 ```
